@@ -1,6 +1,10 @@
 import styled from "styled-components"
+import { useQUickOUT } from "../hooks/quickOUT"
 
 export default function TransactionsPage() {
+
+  useQUickOUT()
+
   return (
     <TransactionsContainer>
       <h1>Nova TRANSAÇÃO</h1>

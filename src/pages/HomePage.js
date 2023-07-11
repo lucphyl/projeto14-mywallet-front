@@ -1,11 +1,15 @@
 import styled from "styled-components"
 import { BiExit } from "react-icons/bi"
 import { AiOutlineMinusCircle, AiOutlinePlusCircle } from "react-icons/ai"
+import { useQUickOUT } from "../hooks/quickOUT"
 import { useContext } from "react"
 import AuthCon from "../context/authCon"
 
 export default function HomePage() {
+
   const {userName} = useContext(AuthCon)
+  useQUickOUT()
+
   return (
     <HomeContainer>
       <Header>

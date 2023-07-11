@@ -8,8 +8,8 @@ import AuthCon from "./context/authCon"
 import { useState } from "react"
 
 export default function App() {
-  const [token, setToken] = useState(undefined)
-  const [username, setUserName ] = useState(undefined)
+  const [token, setToken] = useState(localStorage.getItem("token"))
+  const [username, setUserName ] = useState(localStorage.getItem("userName"))
 
   return (
     <PagesContainer>

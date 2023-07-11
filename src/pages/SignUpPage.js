@@ -3,10 +3,13 @@ import styled from "styled-components"
 import MyWalletLogo from "../components/MyWalletLogo"
 import { useState } from "react"
 import axios from "axios"
+import { useQUickIN } from "../hooks/quiIN"
 
 export default function SignUpPage() {
   const [form,setForm] = useState({name:"", email:"",password:"", confirmPassword:""})
   const navigate = useNavigate()
+
+  useQUickIN()
 
   function handleform(e) {
     setForm({...form, [e.target.name]: e.target.value})

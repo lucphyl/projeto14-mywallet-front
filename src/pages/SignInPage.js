@@ -4,12 +4,15 @@ import MyWalletLogo from "../components/MyWalletLogo"
 import axios from "axios"
 import { useContext, useState } from "react"
 import AuthCon from "../context/authCon"
+import { useQUickIN } from "../hooks/quiIN"
 
 export default function SignInPage() {
   const {setToken, setUserName} = useContext(AuthCon)
-
   const [form,setForm] = useState({ email:"",password:""})
   const navigate = useNavigate()
+
+  useQUickIN()
+
 
   function handleform(e) {
     setForm({...form, [e.target.name]: e.target.value})
